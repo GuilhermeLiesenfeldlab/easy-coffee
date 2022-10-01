@@ -2,15 +2,19 @@ import React from 'react'
 import Button from '../../components/atoms/Button'
 import Container from '../../components/atoms/Container'
 import Paper from '../../components/atoms/Paper'
-
+import Typography from '../../components/Typography'
+import Input from '../../components/atoms/Input'
 
 
 const Home = () => (
   <Container fullHeight
     fullCentered>
     <Paper>
-      <h1>Home</h1>
-
+      <Typography> Bem-vindo! </Typography>
+      <Input
+        type='text'
+      />
+      <br/>
       <Button>
           Login
       </Button>

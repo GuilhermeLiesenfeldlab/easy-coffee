@@ -1,9 +1,6 @@
 import styled from 'styled-components'
 
-const Input = styled.div`
-   background-color: black;
-   color: white;
-   
+const Input = styled.input`
 `
 
 export default Input

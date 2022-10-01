@@ -1,9 +1,13 @@
 import styled from 'styled-components'
 
-const Container = styled.div`
-   background-color: black;
+import {colors} from '../../../assets/variables'
+
+const  {lightBrown} = colors
+
+const Paper = styled.div`
+   background-color: ${lightBrown};
    color: white;
-   
+   border-radius: 10px;
 `
 
-export default Container
+export default Paper
