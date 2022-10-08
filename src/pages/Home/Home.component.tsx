@@ -16,7 +16,7 @@ const Home = () => (
       />
       <br/>
       <Button>
-          Login
+          Entrar
       </Button>
     
     </Paper>
