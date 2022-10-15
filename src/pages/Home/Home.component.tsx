@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import {NavigateFunction, useNavigate} from 'react-router-dom'
 
 import * as UserService from '../../services/Users'
 import Button from '../../components/atoms/Button'
@@ -12,7 +13,8 @@ import { useUser } from '../../context/User'
 const Home = () => {
   const {state, dispatch} = useUser()
   const [cpf, setCpf] = useState<string>('')
-  console.log(state)
+  const navigate = useNavigate()
+
   const handleSubmit = (cpf: string) => {
     UserService.getByCpf(cpf)
       .then((response) => {
@@ -21,6 +23,7 @@ const Home = () => {
           payload: response,
         })
       })
+      .then(()=> navigate('/produtos'))
   }
 
   return (
