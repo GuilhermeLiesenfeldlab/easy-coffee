@@ -1,14 +1,16 @@
-import React, { ButtonHTMLAttributes } from 'react'
+import React from 'react'
+import {StyledComponentPropsWithRef} from 'styled-components'
 import Button from './Button.style'
 
-interface ButtonInterface extends ButtonHTMLAttributes<typeof Button> {
-  children: JSX.Element | string
+interface ButtonInterface extends StyledComponentPropsWithRef<typeof Button> {
+  children?: JSX.Element | string
 }
 
 const ButtonComponent = ({
   children,
+  ...rest
 }: ButtonInterface) => (
-  <Button>{children}</Button>
+  <Button {...rest}>{children}</Button>
 )
 
 export default ButtonComponent

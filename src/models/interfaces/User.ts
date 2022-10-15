@@ -1,4 +1,4 @@
-export interface CustomerInterface{
+export interface UserInterface{
     id: string
     cpf: string
     name: string
@@ -6,3 +6,8 @@ export interface CustomerInterface{
     createdAt: string
     updatedAt: string
     }
+
+export interface UserContextInterface {
+        hasUser: boolean,
+        user: UserInterface | null
+      }
