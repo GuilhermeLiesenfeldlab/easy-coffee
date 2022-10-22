@@ -1,17 +1,17 @@
 import React, {useState} from 'react'
-import {NavigateFunction, useNavigate} from 'react-router-dom'
+import {useNavigate} from 'react-router-dom'
 
 import * as UserService from '../../services/Users'
 import Button from '../../components/atoms/Button'
 import Container from '../../components/atoms/Container'
 import Paper from '../../components/atoms/Paper'
-import Typography from '../../components/Typography'
+import Typography from '../../components/atoms/Typography'
 import Input from '../../components/atoms/Input'
 import { useUser } from '../../context/User'
 
 
 const Home = () => {
-  const {state, dispatch} = useUser()
+  const {dispatch} = useUser()
   const [cpf, setCpf] = useState<string>('')
   const navigate = useNavigate()
 

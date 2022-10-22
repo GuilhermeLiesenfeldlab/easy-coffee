@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { colors } from '../../assets/variables'
+import { colors } from '../../../assets/variables'
 
 const  { white } = colors
 

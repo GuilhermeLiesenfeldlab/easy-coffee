@@ -1,13 +1,22 @@
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 
-import {colors} from '../../../assets/variables'
+import { colors } from '../../../assets/variables'
 
-const  {lightBrown} = colors
+const { lightBrown } = colors
 
-const Paper = styled.div`
-   background-color: ${lightBrown};
-   color: white;
-   border-radius: 10px;
+interface PaperInterface {
+  fluid?: boolean
+}
+
+const Paper = styled.div<PaperInterface>`
+  background-color: ${lightBrown};
+  color: white;
+  border-radius: 15px;
+
+  ${({ fluid }: PaperInterface) => fluid && css`
+    width: 100%;
+    height: 100%;
+  `};
 `
 
 export default Paper
