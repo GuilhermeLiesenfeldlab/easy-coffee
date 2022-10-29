@@ -1,5 +1,5 @@
 import { ActionTypes } from './types'
-import { UserInterface } from '../../models/interfaces/User'
+import  UserInterface  from '../../models/interfaces/User'
 
 export function addUser(payload: UserInterface): ActionTypes {
   return {
