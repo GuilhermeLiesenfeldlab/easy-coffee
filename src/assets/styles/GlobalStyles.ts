@@ -1,26 +1,38 @@
 import {createGlobalStyle} from 'styled-components'
-import coffeeBean from '../images/coffee-beans.svg'
+import coffeBean from '../images/coffee_bean.svg'
 
-import {colors} from '../variables'
+import { colors, sizes } from './variables'
+import { device } from '../../config/device'
 
-const {brown} = colors
+const { brown } = colors
+const { size100Percent } = sizes
 
 const GlobalStyle = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
   *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-}
+  }
 
-  body{
-  background-color: ${brown};
-  background-image: url(${coffeeBean});
-  background-size: 600px;
-  height: 100vh;
-}
+  html {
+    scroll-behavior: smooth;
+    font-size: 10px !important;
+    height: ${size100Percent};
+
+    @media ${device.xxs} {
+      font-size: 8.5px !important;
+    }
+
+  }
+
+  body {
+    background-color: ${brown};
+    background-image: url(${coffeBean});
+    background-size: 600px;
+    height: 100vh;
+  }
 `
-
 
 export default GlobalStyle
